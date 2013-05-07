@@ -10,19 +10,15 @@ exports.createWallPost = function (thisCard) {
     
     graph.setAccessToken(thisCard.token);
     
-    var wallPost = { url: 'https://' + emailUser + ':' + emailPassword + '@appy.cloudant.com/sent/' + thisCard.docID + '/front.png', message: "TESTING TESTING 123" };
+    var wallPost = { url: 'https://' + emailUser + ':' + emailPassword + '@appy.cloudant.com/sent/' + thisCard.docID + '/front.png', message: "Appy Birthday!" };
     
     graph.post(thisCard.address + "/photos", wallPost, function(err, res) {
         
         if(err) {
             
-            console.log(err);
-            
             nano.handleFail(thisCard);
         
         } else {
-            
-            console.log(res);
             
             nano.handleSent(thisCard);
         }

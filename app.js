@@ -34,10 +34,10 @@ app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function(){
     
+    // query on startup
     nano.createQuery();
     
-    setInterval(nano.createQuery, 60 * 1000);
-    
-    console.log('RUNNING');
+    // query every 30 minutes
+    setInterval(nano.createQuery, 30 * 60 * 1000);
     
 });

@@ -29,13 +29,9 @@ exports.createEmail = function (thisCard) {
         
         if(err){
             
-            console.log(err);
-            
             nano.handleFail(thisCard);
             
         } else {
-            
-            console.log("EMAIL SENT: " + res.message);
             
             nano.handleSent(thisCard);
         }

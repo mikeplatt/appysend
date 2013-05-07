@@ -47,15 +47,11 @@ exports.createMMS = function(thisCard) {
                             
                             nano.handleFail(thisCard);
                             
-                            console.log(err);
-                            
                         } else {
                             
                             nano.handleSent(thisCard);
                             
                             fs.unlink(frontFile);
-                            
-                            console.log('ID: %s', id);
                         } 
                     });
                 }

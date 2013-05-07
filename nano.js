@@ -22,19 +22,13 @@ function handleQueryResponse(doc) {
     
     if(doc.where == 'facebook') {
         
-        console.log('HIT FACEBOOK');
-        
         facebook.createWallPost(thisCard);
         
     } else if(doc.where == 'MMS') {
         
-        console.log('HIT MMS');
-        
         mms.createMMS(thisCard);
         
     } else {
-        
-        console.log('HIT EMAIL');
         
         email.createEmail(thisCard);
     }
@@ -42,8 +36,6 @@ function handleQueryResponse(doc) {
 
     
 exports.createQuery = function() {
-    
-    console.log('HIT QUERY');
     
     var startDate = new Date();
     
