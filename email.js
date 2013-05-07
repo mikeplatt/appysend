@@ -15,8 +15,8 @@ var mailOptions = {
 var smtpTransport = nodemailer.createTransport("SMTP",{
     host:"auth.smtp.1and1.co.uk",
     auth: {
-        user: "info@avoidthedoghouse.co.uk",
-        pass: "theMOO2009"
+        user: "send@makesomeoneappy.co.uk",
+        pass: "AppySend456"
     }
 });
 
