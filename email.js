@@ -7,7 +7,7 @@ var emailUser = 'appy';
 var emailPassword = 'snatch123';
 
 var mailOptions = {
-    from: "Appy App <info@avoidthedoghouse.co.uk>", // sender address
+    from: "Appy App <send@makesomeoneappy.co.uk>", // sender address
     subject: "Appy Birthday" // Subject line
 };
 
